@@ -1,0 +1,67 @@
+<%= form_with(model: spectacle, local: true) do |form| %>
+  <% if spectacle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spectacle.errors.count, "error") %> prohibited this spectacle from being saved:</h2>
+
+      <ul>
+      <% spectacle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom, id: :spectacle_nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cle_representation %>
+    <%= form.number_field :cle_representation, id: :spectacle_cle_representation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :representation %>
+    <%= form.text_field :representation, id: :spectacle_representation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_representation %>
+    <%= form.date_select :date_representation, id: :spectacle_date_representation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :heure_representation %>
+    <%= form.time_select :heure_representation, id: :spectacle_heure_representation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_fin %>
+    <%= form.date_select :date_fin, id: :spectacle_date_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :heure_fin %>
+    <%= form.time_select :heure_fin, id: :spectacle_heure_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prix %>
+    <%= form.text_field :prix, id: :spectacle_prix %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :spectacle_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :filiere %>
+    <%= form.text_field :filiere, id: :spectacle_filiere %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

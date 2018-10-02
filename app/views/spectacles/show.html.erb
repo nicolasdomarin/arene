@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @spectacle.nom %>
+</p>
+
+<p>
+  <strong>Cle representation:</strong>
+  <%= @spectacle.cle_representation %>
+</p>
+
+<p>
+  <strong>Representation:</strong>
+  <%= @spectacle.representation %>
+</p>
+
+<p>
+  <strong>Date representation:</strong>
+  <%= @spectacle.date_representation %>
+</p>
+
+<p>
+  <strong>Heure representation:</strong>
+  <%= @spectacle.heure_representation %>
+</p>
+
+<p>
+  <strong>Date fin:</strong>
+  <%= @spectacle.date_fin %>
+</p>
+
+<p>
+  <strong>Heure fin:</strong>
+  <%= @spectacle.heure_fin %>
+</p>
+
+<p>
+  <strong>Prix:</strong>
+  <%= @spectacle.prix %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @spectacle.type %>
+</p>
+
+<p>
+  <strong>Filiere:</strong>
+  <%= @spectacle.filiere %>
+</p>
+
+<%= link_to 'Edit', edit_spectacle_path(@spectacle) %> |
+<%= link_to 'Back', spectacles_path %>
