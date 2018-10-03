@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181001081810) do
+ActiveRecord::Schema.define(version: 20181002150136) do
 
   create_table "clients", force: :cascade do |t|
     t.string "nom"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20181001081810) do
     t.boolean "sexe"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "fichiers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "doc_file_name"
+    t.string "doc_content_type"
+    t.bigint "doc_file_size"
+    t.datetime "doc_updated_at"
   end
 
   create_table "reservations", id: false, force: :cascade do |t|

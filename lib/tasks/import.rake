@@ -2,7 +2,7 @@
   namespace :import do
 
     desc "Import Datas from CSV"
-    task fichier: [:doc], :environment do
+    task :fichier, [:doc] do
       file = File.join Rails.root, "sample.csv"
       i = 0
       CSV.foreach(file) do |row|
