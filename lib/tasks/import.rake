@@ -3,7 +3,7 @@
 
     desc "Import Datas from CSV"
     task :fichier, [:doc] do
-      file = File.join Rails.root, "sample.csv"
+      file = File.join Rails.root."/csv/", "sample.csv"
       i = 0
       CSV.foreach(file) do |row|
         row.split(';')
